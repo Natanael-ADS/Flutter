@@ -1,3 +1,4 @@
+import 'package:app_mobx/src/shared/router_app.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -10,9 +11,15 @@ class HomePage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, RouterApp.PEOPLE_KEY);
+        },
       ),
-      body: Center(),
+      body: Column(children: [
+        Expanded(
+          child: ListView(),
+        ),
+      ]),
     );
   }
 }

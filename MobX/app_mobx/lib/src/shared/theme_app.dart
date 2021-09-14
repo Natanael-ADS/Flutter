@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'components/decoration_style.dart';
+
 class ThemeApp {
   static const primaryColor = Colors.teal;
   ColorScheme? _colorSelectionAndButton;
@@ -14,6 +16,7 @@ class ThemeApp {
     _themeApp = ThemeData(
       primaryColor: primaryColor,
       colorScheme: _colorSelectionAndButton,
+      inputDecorationTheme: DecorationStyle.text,
     );
   }
 

@@ -1,5 +1,5 @@
 import 'package:app_mobx/src/shared/router_app.dart';
-import 'package:app_mobx/src/shared/styles/theme_app.dart';
+import 'package:app_mobx/src/shared/theme_app.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
@@ -10,7 +10,8 @@ class App extends StatelessWidget {
       theme: ThemeApp().getThemeData,
       initialRoute: RouterApp.HOME_KEY,
       routes: {
-        RouterApp.HOME_KEY: (_) => RouterApp.HOME_PAGE,
+        RouterApp.HOME_KEY: (_) => RouterApp.homePage,
+        RouterApp.PEOPLE_KEY: (_) => RouterApp.peoplePage,
       },
     );
   }
