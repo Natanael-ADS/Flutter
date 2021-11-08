@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:search_github/modules/search/domain/repositories/search_repository.dart';
 import 'package:search_github/modules/search/domain/untities/result_search.dart';
-import '../errors.dart';
+import '../../errors.dart';
 
 abstract class SearchByText {
   Future<Either<FailureSearch, List<ResultSearch>>> call(String searchText);

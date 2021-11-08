@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:search_github/modules/search/domain/errors.dart';
+import 'package:search_github/modules/search/errors.dart';
 import 'package:search_github/modules/search/domain/repositories/search_repository.dart';
 import 'package:search_github/modules/search/domain/untities/result_search.dart';
 import 'package:search_github/modules/search/domain/usecases/search_by_text.dart';
@@ -14,7 +14,7 @@ class SearchRepositoryMock implements SearchRepository {
     ];
 
     if (searchText == "error") {
-      return left(FailureSearch());
+      return left(InvalidTextError());
     } else if (searchText == "tem") {
       return right(lista);
     } else if (searchText.isEmpty) {
