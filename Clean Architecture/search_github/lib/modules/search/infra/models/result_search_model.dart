@@ -2,29 +2,29 @@ import 'dart:convert';
 import 'package:search_github/modules/search/domain/untities/result_search.dart';
 
 class ResultSearchModel extends ResultSearch {
-  final String mContent;
-  final String mImg;
-  final String mTitle;
+  final String content;
+  final String img;
+  final String title;
 
   ResultSearchModel({
-    required this.mContent,
-    required this.mImg,
-    required this.mTitle,
-  }) : super(content: mContent, img: mImg, title: mTitle);
+    required this.content,
+    required this.img,
+    required this.title,
+  }) : super(content: content, img: img, title: title);
 
   Map<String, dynamic> toMap() {
     return {
-      'mContent': mContent,
-      'mImg': mImg,
-      'mTitle': mTitle,
+      'content': content,
+      'img': img,
+      'title': title,
     };
   }
 
   factory ResultSearchModel.fromMap(Map<String, dynamic> map) {
     return ResultSearchModel(
-      mContent: map['mContent'],
-      mImg: map['mImg'],
-      mTitle: map['mTitle'],
+      content: map['html_url'],
+      img: map['avatar_url'],
+      title: map['login'],
     );
   }
 

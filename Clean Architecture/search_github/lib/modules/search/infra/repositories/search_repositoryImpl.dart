@@ -19,8 +19,10 @@ class SearchRepositoryImpl implements SearchRepository {
     try {
       final result = await dataSource.getSearch(searchText);
       return Right(result);
+    } on DataSourceError catch (e) {
+      return Left(e.message);
     } catch (e) {
-      return Left(DataSourceError());
+      return Left(DataSourceError("Error no dada Source"));
     }
   }
 }

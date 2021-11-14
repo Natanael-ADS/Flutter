@@ -9,9 +9,9 @@ class SearchDataSourceMock implements SearchDataSource {
   @override
   Future<List<ResultSearchModel>> getSearch(String texto) async {
     final ResultSearchModel model = ResultSearchModel(
-      mContent: "",
-      mImg: "",
-      mTitle: "",
+      content: "",
+      img: "",
+      title: "",
     );
 
     List<ResultSearchModel> models = [model];
