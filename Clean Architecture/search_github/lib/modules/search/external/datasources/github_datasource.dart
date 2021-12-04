@@ -6,7 +6,7 @@ import 'package:search_github/modules/search/infra/datasources/search_datasource
 import 'package:search_github/modules/search/infra/models/result_search_model.dart';
 
 class GitHubDataSource implements SearchDataSource {
-  static const PATH_URL = "https://api.github.com/search/users?q";
+  static const PATH_URL = "https://api.github.com/search/users?q=";
   final Dio dio;
 
   GitHubDataSource(this.dio);

@@ -15,6 +15,6 @@ class SearchByTextImpl implements SearchByText {
   @override
   Future<Either<FailureSearch, List<ResultSearch>>> call(
       String searchText) async {
-    return repository.search(searchText);
+    return await repository.search(searchText);
   }
 }
